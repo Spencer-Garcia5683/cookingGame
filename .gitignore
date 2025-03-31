@@ -1,0 +1,22 @@
+# Unity Generated Files
+/Library/
+/Temp/
+/Logs/
+/Obj/
+/Build/
+/Builds/
+/Packages/
+/ProjectSettings/UnityConnectSettings.asset
+/Assets/Plugins/
+
+# Visual Studio
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.unityproj
