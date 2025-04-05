@@ -35,7 +35,7 @@
                 {
                     "name": "Interact",
                     "type": "Button",
-                    "id": "4db0050b-7d49-47ef-a0e0-490cb8b03c88",
+                    "id": "864f8f61-4411-4a2f-a17d-a23400a26ac4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -155,7 +155,7 @@
                 },
                 {
                     "name": "",
-                    "id": "2b7e57e2-75f4-4f44-aafb-65c437c5e845",
+                    "id": "18cf6efd-44c2-4e72-8f04-ae2fd2615b30",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
@@ -166,7 +166,7 @@
                 },
                 {
                     "name": "",
-                    "id": "78aeab6a-1512-469d-b6aa-8a432e477cd2",
+                    "id": "80163ca5-c5e4-43fb-a3d0-13702dbddd37",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
@@ -182,6 +182,17 @@
         {
             "name": "controller",
             "bindingGroup": "controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "New control scheme",
+            "bindingGroup": "New control scheme",
             "devices": [
                 {
                     "devicePath": "<Gamepad>",

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private Rigidbody rb;
     private PlayerInput playerInput;
+    private IInteractable interact;
     private bool holdRotate = false;
     bool canDash = true, isDashing = false;
     public float dashDuration, dashCooldown;
@@ -39,6 +40,12 @@ public class PlayerMovement : MonoBehaviour
     public void HoldRotate(InputAction.CallbackContext context)
     {
         holdRotate = context.performed; // True when held, false when released
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            interact.Interact();
     }
 
     public void Dash(InputAction.CallbackContext context)
