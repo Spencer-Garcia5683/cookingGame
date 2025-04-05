@@ -6,32 +6,26 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float dashSpeed = 10f;
+    public float dashForce = 15f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+
     private Vector2 moveInput;
     private Rigidbody rb;
     private PlayerInput playerInput;
-    private IInteractable interact;
-    private bool holdRotate = false;
-    bool canDash = true, isDashing = false;
-    public float dashDuration, dashCooldown;
-    private IInteractable interactable;
+    private Transform camTransform;
 
-    private void Update()
-    {
-        if(rb!=null)
-        {
-            rb.angularVelocity = Vector3.zero;
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        }
-    }
+    private bool holdRotate = false;
+    private bool isDashing = false;
+    private bool canDash = true;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        playerInput = GetComponent<PlayerInput>(); // Each player has their own PlayerInput
+        playerInput = GetComponent<PlayerInput>();
+        camTransform = Camera.main.transform;
     }
 
-    // Called automatically when "Move" action is performed
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -39,40 +33,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void HoldRotate(InputAction.CallbackContext context)
     {
-        holdRotate = context.performed; // True when held, false when released
-    }
-
-    public void Interact(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            interact.Interact();
+        holdRotate = context.performed;
     }
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if (context.performed && canDash)
+        if (context.performed && canDash && !isDashing)
         {
-            StartCoroutine(DashCoroutine());
+            StartCoroutine(DashRoutine());
         }
     }
 
-    private IEnumerator DashCoroutine()
+    private void OnCollisionEnter(Collision collision)
     {
-        canDash = false;
-        isDashing = true;
-
-        float startTime = Time.time;
-        Vector3 dashDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized;
-
-        while (Time.time < startTime + dashDuration)
+        if (rb != null)
         {
-            rb.velocity = dashDirection * dashSpeed;
-            yield return null;
+            rb.angularVelocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
         }
-
-        isDashing = false;
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
     }
 
     void FixedUpdate()
@@ -80,9 +58,16 @@ public class PlayerMovement : MonoBehaviour
         if (isDashing)
             return;
 
-        Vector3 moveDirection = new Vector3(moveInput.x, 0, moveInput.y);
+        // Convert move input to camera-relative direction
+        Vector3 forward = camTransform.forward;
+        Vector3 right = camTransform.right;
+        forward.y = 0f;
+        right.y = 0f;
+        forward.Normalize();
+        right.Normalize();
 
-        // Move and rotate the player based on input
+        Vector3 moveDirection = (right * moveInput.x + forward * moveInput.y).normalized;
+
         if (!holdRotate && moveDirection.sqrMagnitude > 0.01f)
         {
             rb.velocity = moveDirection * moveSpeed + new Vector3(0, rb.velocity.y, 0);
@@ -99,5 +84,34 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
+    }
+
+    private IEnumerator DashRoutine()
+    {
+        isDashing = true;
+        canDash = false;
+
+        // Camera-relative dash direction
+        Vector3 forward = camTransform.forward;
+        Vector3 right = camTransform.right;
+        forward.y = 0f;
+        right.y = 0f;
+        forward.Normalize();
+        right.Normalize();
+
+        Vector3 dashDirection = (right * moveInput.x + forward * moveInput.y).normalized;
+        if (dashDirection == Vector3.zero)
+        {
+            dashDirection = transform.forward; // Default forward dash
+        }
+
+        rb.velocity = dashDirection * dashForce;
+
+        yield return new WaitForSeconds(dashDuration);
+
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
