@@ -679,6 +679,37 @@ Transform:
   - {fileID: 8076983516155568053}
   m_Father: {fileID: 8862136830426413287}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2379947295917123553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402842816031693612}
+  m_Layer: 0
+  m_Name: heldItemSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402842816031693612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379947295917123553}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.16, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8028300392696642988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2391257114552016820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,6 +1848,37 @@ Transform:
   - {fileID: 7656409580897996955}
   m_Father: {fileID: 8697756319373797518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6228701576892320661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7673705376932790906}
+  m_Layer: 0
+  m_Name: interactPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7673705376932790906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6228701576892320661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.01, z: 0.803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8028300392696642988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6491955518898930298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,10 +2335,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8028300392696642988}
   - component: {fileID: 3276551973405737512}
+  - component: {fileID: 3692031274301804872}
   - component: {fileID: 6027549429376716032}
   - component: {fileID: 2611577393191046240}
   - component: {fileID: 761430730599484136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2303,6 +2366,8 @@ Transform:
   - {fileID: 2616083714632685645}
   - {fileID: 3681703385741646371}
   - {fileID: 6284293328994076682}
+  - {fileID: 1402842816031693612}
+  - {fileID: 7673705376932790906}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3276551973405737512
@@ -2321,6 +2386,26 @@ MonoBehaviour:
   dashForce: 15
   dashDuration: 0.2
   dashCooldown: 0.4
+--- !u!114 &3692031274301804872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077132954800731665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25336de83dd17745b0e2cec78f87b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHeldItem: {fileID: 0}
+  currentSelectedStation: {fileID: 0}
+  heldItemPos: {fileID: 2379947295917123553}
+  interactPos: {fileID: 6228701576892320661}
+  interactRadius: 0.59
+  ignore:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &6027549429376716032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,6 +2420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 2a02df6d7c2f9fc41b5b356bf402af8e, type: 3}
   m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2393,6 +2479,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4007b2d8-5a13-4bcf-a8d8-39a793913115
     m_ActionName: player/holdRotate[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3692031274301804872}
+        m_TargetAssemblyTypeName: playerInteraction, Assembly-CSharp
+        m_MethodName: pickupItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 864f8f61-4411-4a2f-a17d-a23400a26ac4
+    m_ActionName: player/Interact[/Keyboard/e,/XInputControllerWindows/buttonSouth,/XInputControllerWindows2/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: controller
   m_DefaultActionMap: player

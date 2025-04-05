@@ -6,7 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - Player2
-  - Event
+  - foodCrate
   layers:
   - Default
   - TransparentFX
@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
