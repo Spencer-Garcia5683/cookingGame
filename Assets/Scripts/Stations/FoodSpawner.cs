@@ -40,6 +40,11 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         topIndex++;
     }
 
+    public void Interact()
+    {
+
+    }
+
     GameObject placeFood(GameObject food)
     {
         if (topIndex + 1 > MAXFOOD - 1)
@@ -82,5 +87,13 @@ public class FoodSpawner : MonoBehaviour, IInteractable
             Debug.Log("Error in Interact in food Spawner");
             return null;
         }
+    }
+
+    public bool checkMax()
+    {
+        if (topIndex == MAXFOOD - 1)
+            return true;
+        else
+            return false;
     }
 }
