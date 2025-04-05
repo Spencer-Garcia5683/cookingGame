@@ -17,7 +17,8 @@ public class FoodSpawner : MonoBehaviour, IInteractable
 
     public void SpawnFood(FoodItem itemToSpawn)
     {
-        GameObject food = Instantiate(foodPrefab, transform.position, Quaternion.identity);
+        Vector3 position = new Vector3 (transform.position.x, transform.position.y + 0.2f, transform.position.z);
+        GameObject food = Instantiate(foodPrefab, position, Quaternion.identity);
         FoodObject foodObj = food.GetComponent<FoodObject>();
         foodObj.foodData = itemToSpawn;
     }
