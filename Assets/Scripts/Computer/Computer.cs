@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Computer : MonoBehaviour//, IInteractable
 {
-    public GameObject shop;
+    public GameObject shopUI;
     public ShopManager shopManager;
     void Start()
     {
@@ -15,18 +15,14 @@ public class Computer : MonoBehaviour//, IInteractable
             Debug.Log("No Shop Manager Active");
         }
 
-        shop = GetComponent<GameObject>();
+        shopUI = GetComponent<GameObject>();
 
-        if (shop == null)
-        {
-            Debug.Log("No shop attached");
-        }
        
     }
 
     public void Interact()
     {
-        shop.SetActive(true);
+        shopUI.SetActive(true);
     }
 
     public GameObject pickupItem(GameObject player, bool tempBool, GameObject item)
