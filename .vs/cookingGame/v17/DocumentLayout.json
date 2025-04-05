@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "E:\\Documents\\projects\\cookingGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|e:\\documents\\projects\\cookinggame\\assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|e:\\documents\\projects\\cookinggame\\assets\\scripts\\shop\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\computer\\storeuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\storeuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\computer\\storemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\storemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\computer\\storeuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\storeuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\computer\\storedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\storedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\main\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\main\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|e:\\documents\\projects\\cookinggame\\assets\\scripts\\shop\\shopbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\shop\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|e:\\documents\\projects\\cookinggame\\assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\stations\\foodspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\foodspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\stations\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\stations\\foodspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\foodspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\main\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\main\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ShopButton.cs",
+              "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\ShopButton.cs",
+              "ToolTip": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Shop\\ShopButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T06:42:51.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ShopManager.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\ShopManager.cs",
               "ToolTip": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Shop\\ShopManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T06:11:42.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ShopItem.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\ShopItem.cs",
@@ -72,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IInteractable.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Stations\\IInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\IInteractable.cs",
@@ -85,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "FoodSpawner.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Stations\\FoodSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\FoodSpawner.cs",
@@ -98,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "StoreUIManager.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Computer\\StoreUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\StoreUIManager.cs",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "StoreManager.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Computer\\StoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\StoreManager.cs",
@@ -124,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "StoreData.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Computer\\StoreData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\StoreData.cs",
@@ -137,13 +154,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "playerMovement.cs",
               "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\main\\playerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\main\\playerMovement.cs",
               "ToolTip": "E:\\Documents\\projects\\cookingGame\\Assets\\main\\playerMovement.cs",
               "RelativeToolTip": "Assets\\main\\playerMovement.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAYwCkAAAAnAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAYwCMAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T04:43:58.024Z",
               "EditorCaption": ""

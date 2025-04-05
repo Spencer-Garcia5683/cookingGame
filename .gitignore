@@ -76,3 +76,4 @@ crashlytics-build.properties
 *.lock
 *.json
 /.vs/cookingGame/v17
+.vs/cookingGame/v17/DocumentLayout.json
