@@ -7,28 +7,27 @@ using UnityEngine.UI;
 public class ShopButtons : MonoBehaviour
 {
     public GameObject itemForSale;
-    public TextMeshProUGUI price;
-    public TextMeshProUGUI quantity;
+    public TextMeshProUGUI priceTXT;
+    public TextMeshProUGUI quantityTXT;
     public Button upArrow;
     public Button downArrow;
     public ShopManager shop;
 
+    public float price;
+    public int quantity; 
+
     void Start()
     {
-        itemForSale = GetComponent<GameObject>();
-        price = GetComponent<TextMeshProUGUI>();
-        quantity = GetComponent<TextMeshProUGUI>();
-        upArrow = GetComponent<Button>();   
-        downArrow = GetComponent<Button>();
+        priceTXT = GetComponent<TextMeshProUGUI>();
+        quantityTXT = GetComponent<TextMeshProUGUI>();
         shop = GetComponent<ShopManager>();
 
-        if (itemForSale != null)
-            if (price != null)
-                if (quantity != null)
-                    if (upArrow != null)
-                        if (downArrow != null)
-                            if (shop != null)
-                                Debug.Log("Shop UI set up!");
+    }
+
+    void Update()
+    {
+        quantityTXT.text = quantity.ToString();
+        priceTXT.text = "$" + price.ToString();
     }
 
 

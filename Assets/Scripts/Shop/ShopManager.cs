@@ -9,6 +9,8 @@ public class ShopManager : MonoBehaviour
     public ShopButtons button;
     private StoreData store;
     private int total;
+    public int tax;
+    public GameObject shopUI;
 
     void Start()
     {
@@ -22,12 +24,12 @@ public class ShopManager : MonoBehaviour
 
     public void IncreaseQuantity ()
     {
-        
+        button.quantity++;        
     }
 
     public void DecreaseQuantity()
     {
-
+        button.quantity--;
     }
 
     public void AddToCart()
@@ -42,6 +44,10 @@ public class ShopManager : MonoBehaviour
 
     public void Exit()
     {
-
+        shopUI.SetActive(false);
+    }
+    public int GetTotal()
+    {
+        return 0;
     }
 }
