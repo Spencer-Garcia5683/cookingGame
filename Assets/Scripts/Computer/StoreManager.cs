@@ -13,9 +13,9 @@ public class StoreManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.JoystickButton4))
         {
-            store.AddMoney(10);
+            store.AddMoney(100);
         }
         if (Input.GetKeyUp(KeyCode.P))
         {

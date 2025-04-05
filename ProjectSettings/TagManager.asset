@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - Player2
+  - Event
   layers:
   - Default
   - TransparentFX

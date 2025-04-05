@@ -1,31 +1,47 @@
+using JetBrains.Annotations;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    [SerializeField] private StoreManager storeManager;  // Reference to StoreManager
-    [SerializeField] private ShopItem[] shopItems;      // Array of shop items
-
-    // This method returns the list of shop items to be used by other classes (e.g., ShopButton)
-    public ShopItem[] GetShopItems()
-    {
-        return shopItems;
-    }
+    private List<GameObject> itemsInCart;
+    public ShopButtons button;
+    private StoreData store;
+    private int total;
 
     void Start()
     {
+        store = GetComponent<StoreData>();
+
+        if (store == null)
+        {
+            Debug.Log("Could not access store data");
+        }
+    }
+
+    public void IncreaseQuantity ()
+    {
+        
+    }
+
+    public void DecreaseQuantity()
+    {
 
     }
 
-    public void BuyItem(ShopItem item)
+    public void AddToCart()
     {
-        if (storeManager.store.Money >= item.price)
-        {
-            storeManager.store.SpendMoney(item.price);
-            Debug.Log($"Bought {item.itemName} for ${item.price}. Remaining money: {storeManager.store.Money}");
-        }
-        else
-        {
-            Debug.Log("Not enough money to buy this item.");
-        }
+
+    }
+
+    public void purchaseCart()
+    {
+        store.SpendMoney(total);
+    }
+
+    public void Exit()
+    {
+
     }
 }
