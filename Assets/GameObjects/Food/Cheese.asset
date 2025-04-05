@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836e60b4872e1064a881a4e26a6941db, type: 3}
   m_Name: Cheese
   m_EditorClassIdentifier: 
-  foodName: 
-  icon: {fileID: 0}
-  canPlaceOn: []
+  foodName: Cheese
+  icon: {fileID: 919132149155446097, guid: 4b6dc43d92a26a04eb0a70d679e85424, type: 3}
+  canPlaceOn:
+  - {fileID: 11400000, guid: d16614ec56c3c444f8ed49c141888f4e, type: 2}
+  - {fileID: 11400000, guid: aa2d129c43239844d9781e683703bcab, type: 2}
+  - {fileID: 11400000, guid: b4ee4d1e0dc78ad4fb1909d07a29f213, type: 2}
+  - {fileID: 11400000, guid: 52040b71efb233b419ae68d43ce2deea, type: 2}
+  - {fileID: 11400000, guid: fc7fe88f878f37c43bc9c283513a79cd, type: 2}

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836e60b4872e1064a881a4e26a6941db, type: 3}
   m_Name: Strawberry Ice Cream
   m_EditorClassIdentifier: 
-  foodName: 
-  icon: {fileID: 0}
-  canPlaceOn: []
+  foodName: Strawberry
+  icon: {fileID: 919132149155446097, guid: 594d01db03d6d8046aac7edfb6af5efe, type: 3}
+  canPlaceOn:
+  - {fileID: 11400000, guid: 2fc781b3d09cb6f478385d4f625522e1, type: 2}
+  - {fileID: 11400000, guid: 9a544e5511645b140a643fe9e158f412, type: 2}
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 8cc3c4dd220b16542b5f4a6d2685d21d, type: 2}

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Vanilla Ice Cream
   m_EditorClassIdentifier: 
   foodName: Vanilla Ice Cream
-  icon: {fileID: 0}
+  icon: {fileID: 919132149155446097, guid: 59d00084eda0a674288f63a093a08de1, type: 3}
   canPlaceOn:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2fc781b3d09cb6f478385d4f625522e1, type: 2}
+  - {fileID: 11400000, guid: 9a544e5511645b140a643fe9e158f412, type: 2}
+  - {fileID: 11400000, guid: 904959656278819458109f978aaaa4ff, type: 2}
+  - {fileID: 11400000}

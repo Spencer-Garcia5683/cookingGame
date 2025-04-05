@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836e60b4872e1064a881a4e26a6941db, type: 3}
   m_Name: Top Bun
   m_EditorClassIdentifier: 
-  foodName: 
-  icon: {fileID: 0}
-  canPlaceOn: []
+  foodName: Top Bun
+  icon: {fileID: 919132149155446097, guid: 16df9e43ecb46194db8d6ac95ccab413, type: 3}
+  canPlaceOn:
+  - {fileID: 11400000, guid: aa2d129c43239844d9781e683703bcab, type: 2}
+  - {fileID: 11400000, guid: 118e7ec906a4ecd45b286e16da1d3d58, type: 2}
+  - {fileID: 11400000, guid: fc7fe88f878f37c43bc9c283513a79cd, type: 2}
+  - {fileID: 11400000, guid: 52040b71efb233b419ae68d43ce2deea, type: 2}
+  - {fileID: 11400000, guid: b4ee4d1e0dc78ad4fb1909d07a29f213, type: 2}
