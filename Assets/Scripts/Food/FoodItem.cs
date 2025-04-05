@@ -7,8 +7,8 @@ using UnityEngine;
 public class FoodItem: ScriptableObject
 {
     public string foodName;
-    public GameObject icon;
-    public List<ScriptableObject> canPlaceOn;
+    //public GameObject prefab;
+    //public List<ScriptableObject> canPlaceOn;
 
 
 }
