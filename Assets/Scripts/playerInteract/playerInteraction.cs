@@ -44,7 +44,7 @@ public class playerInteraction : MonoBehaviour
     {
         if (currentSelectedStation == null)
             return;
-        else if (currentSelectedStation != null && !currentSelectedStation.GetComponent<FoodSpawner>().checkMax())
+        else if (currentHeldItem != null && currentSelectedStation != null && currentSelectedStation.GetComponent<FoodSpawner>().checkMax())
             return;
         
 
