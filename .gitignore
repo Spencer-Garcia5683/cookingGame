@@ -75,3 +75,4 @@ crashlytics-build.properties
 *.vsidx
 *.lock
 *.json
+/.vs/cookingGame/v17

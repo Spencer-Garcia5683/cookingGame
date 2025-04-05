@@ -591,6 +591,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a1537694b005442878f8dbc6568d26, type: 3}
+--- !u!1001 &2086595062
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1350659740376243556, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_Name
+      value: ShopManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3163.9497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1960.2417
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.3620253
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
 --- !u!1001 &2661246194046016112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -653,71 +710,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8028300392696642988, guid: d7c8e1604b4bc2d43b2671328f4ce032, type: 3}
   m_PrefabInstance: {fileID: 2661246194046016112}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6872159177971618896
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1350659740376243556, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_Name
-      value: ShopManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3163.9497
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1960.2417
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.3620253
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087954684766282402, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368211208864721850, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: shopItems.Array.data[0].price
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368211208864721850, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
-      propertyPath: shopItems.Array.data[0].itemName
-      value: Vanilla Ice Cream Tub
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d753ec3f3d9d1d54f83f1e7ee634f1fe, type: 3}
 --- !u!1001 &7081387663001189432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -848,4 +840,4 @@ SceneRoots:
   - {fileID: 1554032673}
   - {fileID: 7081387663001189432}
   - {fileID: 659363902}
-  - {fileID: 6872159177971618896}
+  - {fileID: 2086595062}
