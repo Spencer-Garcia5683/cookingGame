@@ -33,7 +33,7 @@ public class playerInteraction : MonoBehaviour
 
         foreach(Collider c in objs)
         {
-            if(c.tag == "foodCrate" && (currentSelectedStation == null || currentSelectedStation != c.gameObject))
+            if((c.tag == "foodCrate" || c.tag == "counter") && (currentSelectedStation == null || currentSelectedStation != c.gameObject))
             {
                 currentSelectedStation = c.gameObject;
             }
@@ -44,30 +44,63 @@ public class playerInteraction : MonoBehaviour
     {
         if (currentSelectedStation == null)
             return;
-        else if (currentHeldItem != null && currentSelectedStation != null && currentSelectedStation.GetComponent<FoodSpawner>().checkMax())
-            return;
+        if(currentSelectedStation.tag == "foodCrate")
+            if (currentHeldItem != null && currentSelectedStation != null && currentSelectedStation.GetComponent<FoodSpawner>().checkMax())
+                return;
+        if(currentSelectedStation.tag == "counter")
+        {
+            if (currentHeldItem != null && currentSelectedStation.GetComponent<Counter>().checkItem())
+                return;
+        }
+
         
-
-        var foodSpawner = currentSelectedStation.GetComponent<FoodSpawner>();
-
-        if (currentHeldItem != null)
+        if(currentSelectedStation.tag == "foodCrate")
         {
-            GameObject leftover = foodSpawner.pickupItem(gameObject, true, currentHeldItem);
-            if (leftover == null)
+            var station = currentSelectedStation.GetComponent<FoodSpawner>();
+            if (currentHeldItem != null)
             {
-                currentHeldItem = null;
+                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem);
+                if (leftover == null)
+                {
+                    currentHeldItem = null;
+                }
+            }
+            else
+            {
+                GameObject pickedUp = station.pickupItem(gameObject, false, null);
+                if (pickedUp != null)
+                {
+                    currentHeldItem = pickedUp;
+                    currentHeldItem.transform.position = heldItemPos.transform.position;
+                    currentHeldItem.transform.parent = gameObject.transform;
+                }
             }
         }
-        else
+        else if(currentSelectedStation.tag == "counter")
         {
-            GameObject pickedUp = foodSpawner.pickupItem(gameObject, false, null);
-            if (pickedUp != null)
+            var station = currentSelectedStation.GetComponent<Counter>();
+            if(currentHeldItem != null)
             {
-                currentHeldItem = pickedUp;
-                currentHeldItem.transform.position = heldItemPos.transform.position;
-                currentHeldItem.transform.parent = gameObject.transform;
+                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem);
+                if (leftover == null)
+                {
+                    currentHeldItem = null;
+                }
+            }
+            else
+            {
+                GameObject pickedUp = station.pickupItem(gameObject, false, null);
+                if (pickedUp != null)
+                {
+                    currentHeldItem = pickedUp;
+                    currentHeldItem.transform.position = heldItemPos.transform.position;
+                    currentHeldItem.transform.parent = gameObject.transform;
+                }
             }
         }
+            
+
+        
     }
 
 

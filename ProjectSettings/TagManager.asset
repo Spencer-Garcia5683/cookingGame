@@ -7,6 +7,10 @@ TagManager:
   - FxTemporaire
   - Player2
   - foodCrate
+  - Event
+  - counter
+  - cuttingBoard
+  - stove
   layers:
   - Default
   - TransparentFX
