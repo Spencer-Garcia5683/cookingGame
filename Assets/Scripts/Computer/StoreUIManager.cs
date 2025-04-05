@@ -10,8 +10,6 @@ public class StoreUIManager : MonoBehaviour
 
     [SerializeField] private Image backgroundImage;
 
-    [SerializeField] private float padding = 10f; // Padding around the text
-
     void Update()
     {
         if (storeManager != null && storeManager.store != null)
