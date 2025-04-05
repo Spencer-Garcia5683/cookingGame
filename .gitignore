@@ -72,3 +72,6 @@ crashlytics-build.properties
 .vs/cookingGame/FileContentIndex/7e1b718a-eb76-4c84-b00f-5dd4eda91a78.vsidx
 *.vsidx
 *.json
+*.vsidx
+*.lock
+*.json

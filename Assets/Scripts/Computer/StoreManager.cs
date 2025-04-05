@@ -7,9 +7,22 @@ public class StoreManager : MonoBehaviour
 
     void Start()
     {
-        store = new StoreData(100, 50); // starting values
+        store = new StoreData(100, 50); 
         Debug.Log("Money: " + store.Money + ", Reputation: " + store.Reputation);
     }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.U))
+        {
+            store.AddMoney(10);
+        }
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            store.IncreaseReputation(10);
+        }
+    }
+
 
     public void MakeSale(int saleValue)
     {

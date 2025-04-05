@@ -16,7 +16,6 @@ public class StoreUIManager : MonoBehaviour
     {
         if (storeManager != null && storeManager.store != null)
         {
-            // Update money and reputation text
             moneyText.text = $"Money: ${storeManager.store.Money}";
             reputationText.text = $"Reputation: {storeManager.store.Reputation}";
         }
