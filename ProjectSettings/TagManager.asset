@@ -11,6 +11,12 @@ TagManager:
   - counter
   - cuttingBoard
   - stove
+  - dishRack
+  - patty
+  - buns
+  - lettuce
+  - tomato
+  - cheese
   layers:
   - Default
   - TransparentFX

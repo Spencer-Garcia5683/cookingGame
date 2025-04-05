@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IInteractable
 {
     public GameObject pickupItem(GameObject player, bool hasFood, GameObject item);
-    public void Interact();
+    public void Interact(GameObject player);
 }
