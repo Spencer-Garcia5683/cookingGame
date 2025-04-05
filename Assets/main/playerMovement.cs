@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private PlayerInput playerInput;
     private Transform camTransform;
-
+    private IInteractable interact;
     private bool holdRotate = false;
     private bool isDashing = false;
     private bool canDash = true;
@@ -34,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
     public void HoldRotate(InputAction.CallbackContext context)
     {
         holdRotate = context.performed;
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            interact.Interact();
     }
 
     public void Dash(InputAction.CallbackContext context)
