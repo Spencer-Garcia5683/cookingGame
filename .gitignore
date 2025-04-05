@@ -70,3 +70,5 @@ crashlytics-build.properties
 # /[Aa]ssets/AssetStoreTools*
 .vs/cookingGame/FileContentIndex/cbb7f2d2-33c6-4e58-ad4b-c5234e6af9b8.vsidx
 .vs/cookingGame/FileContentIndex/7e1b718a-eb76-4c84-b00f-5dd4eda91a78.vsidx
+*.vsidx
+*.vsidx

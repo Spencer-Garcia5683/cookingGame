@@ -56,13 +56,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Interact(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            interactable.Interact();
-        }
-    }
     private IEnumerator DashCoroutine()
     {
         canDash = false;
