@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private bool holdRotate = false;
     bool canDash = true, isDashing = false;
     public float dashDuration, dashCooldown;
+    private IInteractable interactable;
+
     private void Update()
     {
         if(rb!=null)
@@ -47,6 +49,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            interactable.Interact();
+        }
+    }
     private IEnumerator DashCoroutine()
     {
         canDash = false;
