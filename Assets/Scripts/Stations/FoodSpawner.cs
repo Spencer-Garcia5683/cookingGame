@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class FoodSpawner : MonoBehaviour
+public class FoodSpawner : MonoBehaviour, IInteractable
 {
     public GameObject foodPrefab;
-    public FoodItem[] availableFood;
+    public FoodItem availableFoods;
 
     void Start()
     {
@@ -12,7 +12,7 @@ public class FoodSpawner : MonoBehaviour
 
     void Update()
     {
-        //SpawnFood(availableFoods[0]); 
+                 
     }
 
     public void SpawnFood(FoodItem itemToSpawn)
@@ -20,5 +20,10 @@ public class FoodSpawner : MonoBehaviour
         GameObject food = Instantiate(foodPrefab, transform.position, Quaternion.identity);
         FoodObject foodObj = food.GetComponent<FoodObject>();
         foodObj.foodData = itemToSpawn;
+    }
+
+    public void Interact()
+    {
+        SpawnFood(availableFoods);
     }
 }
