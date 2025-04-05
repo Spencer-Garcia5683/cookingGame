@@ -28,4 +28,9 @@ public class Computer : MonoBehaviour, IInteractable
     {
         shop.SetActive(true);
     }
+
+    public GameObject pickupItem(GameObject player, bool tempBool, GameObject item)
+    {
+        return null;
+    }
 }
