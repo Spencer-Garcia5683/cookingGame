@@ -3,7 +3,7 @@ using UnityEngine;
 public class FoodSpawner : MonoBehaviour
 {
     public GameObject foodPrefab;
-    public GameObject availableFood;
+    public FoodItem[] availableFood;
 
     void Start()
     {

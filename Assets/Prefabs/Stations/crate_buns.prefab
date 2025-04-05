@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ed4e81ae7b95744a386d94c1811b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 919132149155446097, guid: 8f5f3be2b1698e94d83f832139f54989, type: 3}
+  foodPrefab: {fileID: 7053924847523100013, guid: e6f3eb8abd85b7a408bc445482896036, type: 3}
   availableFoods:
   - {fileID: 11400000, guid: 2d08edd00453dce42bca604bb86c4f7a, type: 2}
