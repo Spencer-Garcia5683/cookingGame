@@ -8,12 +8,12 @@ public class Computer : MonoBehaviour, IInteractable
     public ShopManager shopManager;
     void Start()
     {
-        if (shopManager == null)
-        {
-            shopManager = GetComponent<ShopManager>();
-        }
+        //if (shopManager == null)
+        //{/
+            //shopManager = GetComponent<ShopManager>();
+        //}
 
-        shopUI = GetComponent<GameObject>();
+        //shopUI = GetComponent<GameObject>();
 
        
     }
