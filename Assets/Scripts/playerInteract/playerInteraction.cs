@@ -33,7 +33,7 @@ public class playerInteraction : MonoBehaviour
 
         foreach(Collider c in objs)
         {
-            if((c.tag == "foodCrate" || c.tag == "counter" || c.tag == "dishRack" || c.tag == "stove" || c.tag == "cuttingBoard") && (currentSelectedStation == null || currentSelectedStation != c.gameObject))
+            if((c.tag == "foodCrate" || c.tag == "counter" || c.tag == "dishRack" || c.tag == "stove" || c.tag == "cuttingBoard" || c.tag == "computer") && (currentSelectedStation == null || currentSelectedStation != c.gameObject))
             {
                 currentSelectedStation = c.gameObject;
             }
@@ -86,6 +86,10 @@ public class playerInteraction : MonoBehaviour
             if (currentSelectedStation.tag == "cuttingBoard")
             {
                 currentSelectedStation.GetComponent<CuttingBoard>().setChopping(true);
+            }
+            if(currentSelectedStation.tag == "computer")
+            {
+                currentSelectedStation.GetComponent<Computer>().Interact(gameObject);
             }
         }
 
