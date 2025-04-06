@@ -15,6 +15,7 @@ public class StoreManager : MonoBehaviour
     public GameObject ShopUI;
     public ShopManager shop;
     public Cart cart;
+    public RandomEvents randomEvents;
 
     public TextMeshProUGUI minutes;
     public TextMeshProUGUI hours;
@@ -47,6 +48,9 @@ public class StoreManager : MonoBehaviour
             }
 
         if (hours != null) hours.text = hourCounter.ToString();
+
+        if (Input.GetKeyDown(KeyCode.I)) hourCounter++;
+        if (Input.GetKeyDown(KeyCode.O)) minuteCounter++;
     }
 
     public void MakeSale(int saleValue)
@@ -82,11 +86,13 @@ public class StoreManager : MonoBehaviour
                 // You can also add logic to reset hours if needed (e.g., 24hr cycle)
                 if (hourCounter >= 20)
                 {
-                    hourCounter = 0;
+                    hourCounter = 8;
                     dayCounter++;
                     Debug.Log("New Day! Day count: " + dayCounter);
 
-                    StopCoroutine(UpdateTime());
+                    if (randomEvents != null)
+                        randomEvents.OnNewDay();
+
                 }
             }
 
