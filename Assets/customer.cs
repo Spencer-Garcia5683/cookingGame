@@ -17,6 +17,8 @@ public class customer : MonoBehaviour
 
     public CustomerState state;
 
+    public float checkRadius = 1f;
+
     public void Initialize(Transform destination, GameModeController gameController, int linePos)
     {
         agent = GetComponent<NavMeshAgent>();
@@ -29,6 +31,26 @@ public class customer : MonoBehaviour
 
     private void Update()
     {
+        Collider[] windows = Physics.OverlapSphere(transform.position + Vector3.up, checkRadius);
+        foreach (Collider window in windows)
+        {
+            if (window.tag == "serve")
+            {
+                if (CheckPlateInWindow(window.gameObject.GetComponent<servingWindow>()))
+                {
+                    GameObject temp = GameObject.FindGameObjectWithTag("storeManager");
+                    temp.GetComponent<StoreManager>().MakeSale(25);
+
+                    window.GetComponent<servingWindow>().removeItem();
+
+                    // After serving, remove the customer from the line
+                    controller.RemoveCustomerFromLine(this);
+
+                    Destroy(gameObject);
+                }
+            }
+        }
+
         switch (state)
         {
             case CustomerState.WalkingToLine:
@@ -37,11 +59,11 @@ public class customer : MonoBehaviour
                 break;
 
             case CustomerState.Ordering:
-                // tell GameMode or Player script they’re ordering
+                // Handle ordering state here
                 break;
 
             case CustomerState.WaitingForFood:
-                // Wait here
+                // Handle waiting for food
                 break;
 
             case CustomerState.WalkingToTable:
@@ -50,7 +72,7 @@ public class customer : MonoBehaviour
                 break;
 
             case CustomerState.Eating:
-                // Timer or animation here, then leave
+                // Handle eating state here
                 break;
         }
     }
@@ -63,8 +85,7 @@ public class customer : MonoBehaviour
 
     public bool CheckPlateInWindow(servingWindow window)
     {
-        // Check if the correct plate is in the right slot
-        if (desiredFood == FoodType.Burger && window.burgSlot.transform.childCount > 0)
+        if (window.burgSlot != null)
             return true;
 
         if (desiredFood == FoodType.IceCream && window.iceCreamSlot.transform.childCount > 0)
@@ -91,7 +112,10 @@ public class customer : MonoBehaviour
         state = CustomerState.WalkingToLine;
     }
 
-    public int GetLineIndex() => lineIndex;
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(gameObject.transform.position + Vector3.up, checkRadius);
+    }
 }
 
 public enum CustomerState
@@ -103,4 +127,3 @@ public enum CustomerState
     WalkingToTable,
     Eating
 }
-

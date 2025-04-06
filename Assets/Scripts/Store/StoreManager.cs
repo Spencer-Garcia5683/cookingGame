@@ -90,7 +90,7 @@ public class StoreManager : MonoBehaviour
                 }
             }
 
-            Debug.Log($"Time: {hourCounter:D2}:{minuteCounter:D2}");
+            //Debug.Log($"Time: {hourCounter:D2}:{minuteCounter:D2}");
         }
     }
 

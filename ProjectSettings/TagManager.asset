@@ -29,6 +29,9 @@ TagManager:
   - bottomBun
   - computer
   - ground
+  - serve
+  - storeManager
+  - trash
   layers:
   - Default
   - TransparentFX

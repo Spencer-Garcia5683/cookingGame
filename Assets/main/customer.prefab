@@ -877,6 +877,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c19c3dc9406184f8f757d48700605e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desiredFood: 0
+  state: 0
+  checkRadius: 2.57
 --- !u!195 &6947889989464949142
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -918,7 +921,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.9
   m_Height: 2.24
   m_Direction: 1
   m_Center: {x: 0, y: 1.16, z: 0}

@@ -38,11 +38,35 @@ public class servingWindow : MonoBehaviour, IInteractable
 
     public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice, bool isPlate)
     {
-        return null;
+        if (item != null && burgSlot == null)
+        {
+            burgSlot = item;
+            burgSlot.transform.parent = spawnLocation;
+            burgSlot.transform.localPosition = Vector3.zero;
+            player.GetComponent<playerInteraction>().removeHeldItem();
+            return null;
+        }
+        else if (item == null && burgSlot != null)
+        {
+            GameObject temp = burgSlot;
+            burgSlot = null;
+            return temp;
+        }
+        else
+        {
+            Debug.Log("Error in Interact in food Spawner");
+            return null;
+        }
     }
     public void Interact(GameObject player)
     {
 
+    }
+
+    public void removeItem()
+    {
+        Destroy(burgSlot);
+        burgSlot = null;
     }
 
 }
