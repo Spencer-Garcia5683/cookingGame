@@ -1,12 +1,19 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum FoodType
+{
+    Burger,
+    IceCream
+}
+
 public class customer : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform targetSpot;
     private GameModeController controller;
     private int lineIndex;
+    public FoodType desiredFood;
 
     public CustomerState state;
 
@@ -46,6 +53,24 @@ public class customer : MonoBehaviour
                 // Timer or animation here, then leave
                 break;
         }
+    }
+
+    public void SetOrder(FoodType order)
+    {
+        desiredFood = order;
+        Debug.Log($"Customer {name} wants {order}");
+    }
+
+    public bool CheckPlateInWindow(servingWindow window)
+    {
+        // Check if the correct plate is in the right slot
+        if (desiredFood == FoodType.Burger && window.burgSlot.transform.childCount > 0)
+            return true;
+
+        if (desiredFood == FoodType.IceCream && window.iceCreamSlot.transform.childCount > 0)
+            return true;
+
+        return false;
     }
 
     public void MoveTo(Transform newTarget)
