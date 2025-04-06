@@ -102,6 +102,7 @@ public class customer : MonoBehaviour
 
     public bool HasReachedDestination()
     {
+        if(agent == null) return false;
         return !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance;
     }
 

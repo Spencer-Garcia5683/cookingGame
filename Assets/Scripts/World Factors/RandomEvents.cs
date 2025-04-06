@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using static System.Diagnostics.Debug;
-using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.UI;
+
 public enum Events { Earthquake, Thunderstorm }
 
 public class RandomEvents : MonoBehaviour
 {
     public GameObject camerashake;
     private PlayerMovement movement;
+
+    public float minEventInterval = 10f;  // Minimum time interval between events
+    public float maxEventInterval = 30f;  // Maximum time interval between events
 
     void Start()
     {
@@ -20,28 +20,35 @@ public class RandomEvents : MonoBehaviour
             if (player != null)
                 movement = player.GetComponent<PlayerMovement>();
         }
+
+        // Start the random event coroutine that triggers events at random intervals
+        StartCoroutine(RandomEventRoutine());
     }
 
-
-    // Called externally when a new day starts
-    public void OnNewDay()
+    // Coroutine that triggers events at random intervals
+    private IEnumerator RandomEventRoutine()
     {
-        TriggerEvent(Events.Earthquake);
-        /*int roll = Random.Range(1, 11); // 1 to 10 inclusive
-        Debug.Log("Event roll: " + roll);
-
-        switch (roll)
+        while (true)  // Loop indefinitely
         {
-            case 1:
-                TriggerEvent(Events.Earthquake);
-                break;
-            case 2:
-                TriggerEvent(Events.Thunderstorm);
-                break;
-            default:
-                Debug.Log("Normal day - no special event.");
-                break;
-        }*/
+            float waitTime = Random.Range(minEventInterval, maxEventInterval);
+            yield return new WaitForSeconds(waitTime);
+
+            // Roll a random number to determine which event to trigger
+            int roll = Random.Range(1, 11);  // 1 to 10 inclusive
+
+            switch (roll)
+            {
+                case 1:
+                    TriggerEvent(Events.Earthquake);
+                    break;
+                case 2:
+                    TriggerEvent(Events.Thunderstorm);
+                    break;
+                default:
+                    Debug.Log("Normal day - no special event.");
+                    break;
+            }
+        }
     }
 
     private void TriggerEvent(Events e)
@@ -50,25 +57,25 @@ public class RandomEvents : MonoBehaviour
         {
             case Events.Earthquake:
                 Debug.Log("Earthquake event triggered!");
-                StartCoroutine(earthquake());
+                StartCoroutine(EarthquakeEffect());
                 break;
             case Events.Thunderstorm:
                 Debug.Log("Thunderstorm event triggered!");
-                //Instantiate(camerashake);
+                // Instantiate the camerashake or thunderstorm effect here if needed
                 break;
         }
     }
 
-    private IEnumerator earthquake()
+    private IEnumerator EarthquakeEffect()
     {
-        int shake = Random.Range(1, 11);
-        int seconds = Random.Range(20, 55);
+        int shakeCount = Random.Range(1, 11);  // Number of shakes
+        int seconds = Random.Range(20, 55);    // Duration of the event
 
-        Debug.Log("Number of shakes: " + shake);
+        Debug.Log("Number of shakes: " + shakeCount);
 
-        for (int i = 0; i < shake; i++)
+        for (int i = 0; i < shakeCount; i++)
         {
-            Instantiate(camerashake);
+            Instantiate(camerashake);  // Assuming camerashake is a prefab to be instantiated
             if (movement != null)
                 movement.moveSpeed *= 0.5f;
 
@@ -80,5 +87,4 @@ public class RandomEvents : MonoBehaviour
 
         yield return new WaitForSeconds(seconds);
     }
-
 }
