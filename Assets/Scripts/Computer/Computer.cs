@@ -29,7 +29,7 @@ public class Computer : MonoBehaviour, IInteractable
         shop.SetActive(true);
     }
 
-    public GameObject pickupItem(GameObject player, bool tempBool, GameObject item)
+    public GameObject pickupItem(GameObject player, bool tempBool, GameObject item, bool isStack, bool isSlice)
     {
         return null;
     }

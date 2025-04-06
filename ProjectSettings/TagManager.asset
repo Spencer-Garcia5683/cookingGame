@@ -20,6 +20,9 @@ TagManager:
   - lettuceStack
   - cheeseStack
   - tomatoStack
+  - lettuceSlice
+  - cheeseSlice
+  - tomatoSlice
   layers:
   - Default
   - TransparentFX
