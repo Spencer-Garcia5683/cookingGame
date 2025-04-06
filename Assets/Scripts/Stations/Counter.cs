@@ -23,6 +23,9 @@ public class Counter : MonoBehaviour, IInteractable
 
     public bool checkItem()
     {
+        if (currentItem != null && currentItem.GetComponent<plate>() != null)
+            return false;
+
         if (currentItem == null)
             return false;
         else
@@ -30,8 +33,17 @@ public class Counter : MonoBehaviour, IInteractable
     }
 
 
-    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice)
+    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice, bool isPlate)
     {
+        if (item != null && currentItem != null && currentItem.GetComponent<plate>() != null)
+        {
+            if (isPlate)
+                return null;
+
+            print("placing in plate");
+            currentItem.GetComponent<plate>().placeIngredient(item, spawnLocation.transform.position);
+            return null;
+        }
         if (item != null && currentItem == null)
         {
             currentItem = item;
@@ -61,6 +73,12 @@ public class Counter : MonoBehaviour, IInteractable
     public GameObject getItem()
     {
         return currentItem;
+    }
+
+    public void removeItem()
+    {
+        Destroy(currentItem);
+        currentItem = null;
     }
 
 }

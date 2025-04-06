@@ -70,7 +70,7 @@ public class FoodSpawner : MonoBehaviour, IInteractable
     }
 
     // This is called when a player interacts with the object
-    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice)
+    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice, bool isPlate)
     {
         
 

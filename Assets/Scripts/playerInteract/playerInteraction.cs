@@ -45,47 +45,77 @@ public class playerInteraction : MonoBehaviour
         if (temp == null)
             return;
 
-        switch(temp.tag)
+        GameObject newObj;
+        switch (temp.tag)
         {
             case "lettuceStack":
-                GameObject newObj = temp.GetComponent<ingredientStack>().getFromStack();
+                newObj = temp.GetComponent<ingredientStack>().getFromStack();
                 currentHeldItem = newObj;
                 currentHeldItem.transform.position = heldItemPos.transform.position;
                 currentHeldItem.transform.parent = gameObject.transform;
                 break;
             case "tomatoStack":
-
+                newObj = temp.GetComponent<ingredientStack>().getFromStack();
+                currentHeldItem = newObj;
+                currentHeldItem.transform.position = heldItemPos.transform.position;
+                currentHeldItem.transform.parent = gameObject.transform;
                 break;
             case "cheeseStack":
-
+                newObj = temp.GetComponent<ingredientStack>().getFromStack();
+                currentHeldItem = newObj;
+                currentHeldItem.transform.position = heldItemPos.transform.position;
+                currentHeldItem.transform.parent = gameObject.transform;
                 break;
         }
         
     }
 
+    private float buttonPressTime;
+    [SerializeField] private float holdThreshold = 0.2f; // Adjust as needed
+
     public void interactWithStation(InputAction.CallbackContext context)
     {
-        if(context.started && !context.performed)
-        {
-            if (currentSelectedStation.tag == "cuttingBoard" && currentHeldItem == null)
-            {
-                GameObject temp = currentSelectedStation.GetComponent<CuttingBoard>().getItem();
-                checkTag(temp);
-            }
-            if (currentSelectedStation.tag == "counter")
-            {
+        if(currentSelectedStation == null) return;
 
-            }
-        }
-        if(context.performed)
+        if (context.started)
         {
-            if(currentSelectedStation.tag == "cuttingBoard")
+            // Start the timer when the button is first pressed
+            buttonPressTime = Time.time;
+
+            // Optionally begin chopping immediately (visually responsive)
+            if (currentSelectedStation.tag == "cuttingBoard")
             {
                 currentSelectedStation.GetComponent<CuttingBoard>().setChopping(true);
             }
         }
-        if(context.canceled)
+
+        if (context.canceled)
         {
+            // End of input — check how long the button was held
+            float pressDuration = Time.time - buttonPressTime;
+
+            if (pressDuration < holdThreshold)
+            {
+                // Tapped (quick press) behavior
+                if (currentSelectedStation.tag == "cuttingBoard" && currentHeldItem == null)
+                {
+                    GameObject temp = currentSelectedStation.GetComponent<CuttingBoard>().getItem();
+                    
+                    checkTag(temp);
+                    if (temp.GetComponent<ingredientStack>().ingredients[0] == null)
+                        currentSelectedStation.GetComponent<CuttingBoard>().removeItem();
+                }
+                else if (currentSelectedStation.tag == "counter" && currentHeldItem == null)
+                {
+                    GameObject temp = currentSelectedStation.GetComponent<Counter>().getItem();
+                    
+                    checkTag(temp);
+                    if (temp.GetComponent<ingredientStack>().ingredients[0] == null)
+                        temp.GetComponent<Counter>().removeItem();
+                }
+            }
+
+            // Regardless of tap or hold, cancel chopping
             if (currentSelectedStation.tag == "cuttingBoard")
             {
                 currentSelectedStation.GetComponent<CuttingBoard>().setChopping(false);
@@ -103,7 +133,9 @@ public class playerInteraction : MonoBehaviour
         if(currentSelectedStation.tag == "counter")
         {
             if (currentHeldItem != null && currentSelectedStation.GetComponent<Counter>().checkItem())
+            {
                 return;
+            }
         }
         if (currentSelectedStation.tag == "dishRack")
             if (currentHeldItem != null && currentSelectedStation != null && currentSelectedStation.GetComponent<DishRack>().checkMax())
@@ -115,7 +147,7 @@ public class playerInteraction : MonoBehaviour
             if (currentHeldItem != null)
             {
                 
-                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false);
+                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
                 if (leftover == null)
                 {
                     currentHeldItem = null;
@@ -123,7 +155,7 @@ public class playerInteraction : MonoBehaviour
             }
             else
             {
-                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false);
+                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false, false);
                 if (pickedUp != null)
                 {
                     currentHeldItem = pickedUp;
@@ -140,16 +172,16 @@ public class playerInteraction : MonoBehaviour
                 //GameObject tempobj;
                 if (currentHeldItem.tag == "cheeseSlice" || currentHeldItem.tag == "lettuceSlice" || currentHeldItem.tag == "tomatoSlice")
                 {
-                    station.pickupItem(gameObject, true, currentHeldItem, false, true);
+                    station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
                     //removeHeldItem();
                 }
                 if(currentHeldItem.tag == "cheeseStack" || currentHeldItem.tag == "lettuceStack" || currentHeldItem.tag == "tomatoStack")
                 {
-                    station.pickupItem(gameObject, true, currentHeldItem, true, false);
+                    station.pickupItem(gameObject, true, currentHeldItem, true, false, false);
                 }
 
 
-                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false);
+                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
                 if (leftover == null)
                 {
                     currentHeldItem = null;
@@ -157,7 +189,7 @@ public class playerInteraction : MonoBehaviour
             }
             else
             {
-                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false);
+                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false, false);
                 if (pickedUp != null)
                 {
                     currentHeldItem = pickedUp;
@@ -171,7 +203,7 @@ public class playerInteraction : MonoBehaviour
             var station = currentSelectedStation.GetComponent<Stove>();
             if (currentHeldItem != null)
             {
-                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false);
+                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
                 if (leftover == null)
                 {
                     currentHeldItem = null;
@@ -179,7 +211,7 @@ public class playerInteraction : MonoBehaviour
             }
             else
             {
-                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false);
+                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false, false);
                 if (pickedUp != null)
                 {
                     currentHeldItem = pickedUp;
@@ -193,7 +225,7 @@ public class playerInteraction : MonoBehaviour
             var station = currentSelectedStation.GetComponent<DishRack>();
             if (currentHeldItem != null)
             {
-                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false);
+                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
                 if (leftover == null)
                 {
                     currentHeldItem = null;
@@ -201,7 +233,7 @@ public class playerInteraction : MonoBehaviour
             }
             else
             {
-                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false);
+                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false, false);
                 if (pickedUp != null)
                 {
                     currentHeldItem = pickedUp;
@@ -215,7 +247,16 @@ public class playerInteraction : MonoBehaviour
             var station = currentSelectedStation.GetComponent<Counter>();
             if(currentHeldItem != null)
             {
-                GameObject leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false);
+                GameObject leftover;
+                //if(currentHeldItem.tag == "plate")
+                //if (currentSelectedStation.GetComponent<Counter>().currentItem != null)
+                    //if (currentSelectedStation.GetComponent<Counter>().currentItem.tag == "plate")
+                    //{
+                        //leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, );
+                        //return;
+                    //}
+
+                leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
                 if (leftover == null)
                 {
                     currentHeldItem = null;
@@ -223,7 +264,7 @@ public class playerInteraction : MonoBehaviour
             }
             else
             {
-                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false);
+                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false, false);
                 if (pickedUp != null)
                 {
                     currentHeldItem = pickedUp;

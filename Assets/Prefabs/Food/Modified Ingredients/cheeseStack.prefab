@@ -92,6 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2385323805655853927}
+  - component: {fileID: 7218894436818068998}
   m_Layer: 0
   m_Name: cheeseStack
   m_TagString: cheeseStack
@@ -118,6 +119,25 @@ Transform:
   - {fileID: 2328058521672426532}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7218894436818068998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555082714576427404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c8b94d0b2a69a488f36f7ce6b586c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MAX: 4
+  ingredients:
+  - {fileID: 9130966193422723836}
+  - {fileID: 7147552184853477655}
+  - {fileID: 9033819095658606848}
+  - {fileID: 6122568380190861524}
+  positions: []
 --- !u!1 &6122568380190861524
 GameObject:
   m_ObjectHideFlags: 0

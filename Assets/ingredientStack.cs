@@ -10,10 +10,10 @@ public class ingredientStack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        positions[0] = ingredients[0].transform.position;
-        positions[1] = ingredients[1].transform.position;
-        positions[2] = ingredients[2].transform.position;
-        positions[3] = ingredients[3].transform.position;
+        //positions[0] = ingredients[0].transform.position;
+        //positions[1] = ingredients[1].transform.position;
+        //positions[2] = ingredients[2].transform.position;
+        //positions[3] = ingredients[3].transform.position;
     }
 
     // Update is called once per frame

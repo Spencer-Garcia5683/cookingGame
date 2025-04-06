@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8217449803525986429}
   m_Layer: 0
   m_Name: Sliced Lettuce (3)
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 17349209574952964}
   m_Layer: 0
   m_Name: Sliced Lettuce (1)
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 3888573819394803909}
   m_Layer: 0
   m_Name: Sliced Lettuce (2)
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,6 +358,7 @@ MonoBehaviour:
   - {fileID: 60849138705630902}
   - {fileID: 477531717435558520}
   - {fileID: 43530693694572116}
+  positions: []
 --- !u!1 &5860067878771198387
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +454,7 @@ GameObject:
   - component: {fileID: 7795033231854650339}
   m_Layer: 0
   m_Name: Sliced Lettuce
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3,8 +3,44 @@
   "WorkspaceRootPath": "E:\\gameProjects\\cooking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\gameProjects\\cooking\\Temp\\Compiled-Standard.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Temp\\Compiled-Standard.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|e:\\gameprojects\\cooking\\assets\\scripts\\playerinteract\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteract\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\scripts\\stations\\cuttingboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\cuttingboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\scripts\\stations\\counter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\counter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\ingredientstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\ingredientstack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|e:\\gameprojects\\cooking\\assets\\plate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\plate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\scripts\\stations\\dishrack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\dishrack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\scripts\\computer\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\scripts\\stations\\foodspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\foodspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\scripts\\stations\\stove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\stove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|E:\\gameProjects\\cooking\\assets\\scripts\\stations\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2149C7-DEB8-BF7C-2413-B512CBDF3014}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stations\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +50,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "plate.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\plate.cs",
+              "RelativeDocumentMoniker": "Assets\\plate.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\plate.cs",
+              "RelativeToolTip": "Assets\\plate.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAAEAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:21:09.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DishRack.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\DishRack.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\DishRack.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\DishRack.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stations\\DishRack.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAswFMAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:09:10.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Counter.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\Counter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\Counter.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\Counter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stations\\Counter.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAE8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:09:05.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Stove.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\Stove.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\Stove.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\Stove.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stations\\Stove.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAowFIAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:08:55.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FoodSpawner.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\FoodSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\FoodSpawner.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\FoodSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stations\\FoodSpawner.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowEgAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:08:44.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Computer.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Computer\\Computer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\Computer.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Computer\\Computer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Computer\\Computer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAB8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:08:37.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IInteractable.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\IInteractable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\IInteractable.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\IInteractable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stations\\IInteractable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:06:08.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CuttingBoard.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\CuttingBoard.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stations\\CuttingBoard.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\Stations\\CuttingBoard.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stations\\CuttingBoard.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAHsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:01:52.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ingredientStack.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\ingredientStack.cs",
+              "RelativeDocumentMoniker": "Assets\\ingredientStack.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\ingredientStack.cs",
+              "RelativeToolTip": "Assets\\ingredientStack.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAwA8AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:01:32.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Compiled-Standard.shader",
-              "DocumentMoniker": "E:\\gameProjects\\cooking\\Temp\\Compiled-Standard.shader",
-              "RelativeDocumentMoniker": "Temp\\Compiled-Standard.shader",
-              "ToolTip": "E:\\gameProjects\\cooking\\Temp\\Compiled-Standard.shader",
-              "RelativeToolTip": "Temp\\Compiled-Standard.shader",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-04-01T08:03:36.735Z",
+              "Title": "playerInteraction.cs",
+              "DocumentMoniker": "E:\\gameProjects\\cooking\\Assets\\Scripts\\playerInteract\\playerInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\playerInteract\\playerInteraction.cs",
+              "ToolTip": "E:\\gameProjects\\cooking\\Assets\\Scripts\\playerInteract\\playerInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\playerInteract\\playerInteraction.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAAAGoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:01:04.605Z",
               "EditorCaption": ""
             }
           ]
