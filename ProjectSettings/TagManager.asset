@@ -27,11 +27,13 @@ TagManager:
   - cookedPatty
   - topBun
   - bottomBun
+  - computer
+  - ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
   - Player

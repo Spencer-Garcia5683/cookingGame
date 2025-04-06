@@ -92,9 +92,9 @@ MonoBehaviour:
   bottomBunPrefab: {fileID: 7053924847523100013, guid: 7c6c4d1393d920549829a910ba9ce6fc, type: 3}
   positions:
   - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0.05, z: 0}
   - {x: 0, y: 0.2, z: 0}
   - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.45, z: 0}
+  - {x: 0, y: 0.5, z: 0}
   - {x: 0, y: 0.6, z: 0}
-  - {x: 0, y: 0.8, z: 0}
-  - {x: 0, y: 1, z: 0}
-  - {x: 0, y: 1.2, z: 0}
