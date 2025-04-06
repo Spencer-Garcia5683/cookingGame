@@ -1,33 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\",
+  "WorkspaceRootPath": "E:\\Documents\\projects\\cookingGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|c:\\users\\mr. boatcraft\\documents\\github\\cookinggame\\assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|e:\\documents\\projects\\cookinggame\\assets\\scripts\\shop\\checkoutitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\checkoutitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\assets\\scripts\\shop\\shopbuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopbuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\assets\\scripts\\shop\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|e:\\documents\\projects\\cookinggame\\assets\\scripts\\shop\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|c:\\users\\mr. boatcraft\\documents\\github\\cookinggame\\assets\\scripts\\computer\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shop\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\assets\\scripts\\computer\\storeuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\storeuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\assets\\scripts\\computer\\storedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\storedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\assets\\scripts\\computer\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|E:\\Documents\\projects\\cookingGame\\assets\\scripts\\computer\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D597D9-D35D-DE41-07B5-2088719C4C66}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\computer\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,41 +26,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CheckOutItem.cs",
+              "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\CheckOutItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\CheckOutItem.cs",
+              "ToolTip": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\CheckOutItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Shop\\CheckOutItem.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T01:23:53.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\Cart.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\Cart.cs",
-              "ToolTip": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\Cart.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Computer\\Cart.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAswCsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T19:24:16.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StoreData.cs",
-              "DocumentMoniker": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\StoreData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\StoreData.cs",
-              "ToolTip": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\StoreData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Computer\\StoreData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T19:17:21.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Computer.cs",
-              "DocumentMoniker": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\Computer.cs",
+              "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Computer\\Computer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\Computer.cs",
-              "ToolTip": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\Computer.cs",
+              "ToolTip": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Computer\\Computer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Computer\\Computer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -81,54 +56,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ShopItem.cs",
-              "DocumentMoniker": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Shop\\ShopItem.cs",
+              "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\ShopItem.cs",
-              "ToolTip": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Shop\\ShopItem.cs",
+              "ToolTip": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopItem.cs",
               "RelativeToolTip": "Assets\\Scripts\\Shop\\ShopItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T18:58:07.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ShopManager.cs",
-              "DocumentMoniker": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Shop\\ShopManager.cs",
+              "DocumentMoniker": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\ShopManager.cs",
-              "ToolTip": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Shop\\ShopManager.cs",
+              "ToolTip": "E:\\Documents\\projects\\cookingGame\\Assets\\Scripts\\Shop\\ShopManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Shop\\ShopManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAuwCMAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T17:59:21.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ShopButtons.cs",
-              "DocumentMoniker": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Shop\\ShopButtons.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Shop\\ShopButtons.cs",
-              "ToolTip": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Shop\\ShopButtons.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Shop\\ShopButtons.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCIAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T17:59:00.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StoreUIManager.cs",
-              "DocumentMoniker": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\StoreUIManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Computer\\StoreUIManager.cs",
-              "ToolTip": "C:\\Users\\Mr. BoatCraft\\Documents\\GitHub\\cookingGame\\Assets\\Scripts\\Computer\\StoreUIManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Computer\\StoreUIManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T17:58:12.84Z",
               "EditorCaption": ""
             }
           ]

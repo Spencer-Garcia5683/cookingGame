@@ -31,4 +31,5 @@ public class ShopItem : MonoBehaviour
         if (nameTXT != null) nameTXT.text = itemName;
         if (itemImageUI != null && itemImage != null) itemImageUI.sprite = itemImage;
     }
+
 }
