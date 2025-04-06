@@ -8,6 +8,9 @@ public enum DayOfTheWeek { Monday, Tuesday, Wednesday, Thursday, Friday };
 public class StoreManager : MonoBehaviour
 {
     public StoreData store;
+    public GameObject ShopUI;
+    public ShopManager shop;
+    public Cart cart;
     private int dayCounter;
     private int hourCounter = 8;
     private int minuteCounter = 0;
@@ -20,7 +23,10 @@ public class StoreManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            store.AddMoney(500f);
+        }
     }
 
 
@@ -34,6 +40,11 @@ public class StoreManager : MonoBehaviour
     {
         store.SpendMoney(refundValue);
         store.DecreaseReputation(1);
+    }
+    public void PurchaseItems()
+    {
+        store.SpendMoney(cart.finalPrice);
+        ShopUI.SetActive(false);
     }
 
 }

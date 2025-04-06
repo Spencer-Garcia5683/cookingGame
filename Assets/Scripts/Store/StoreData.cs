@@ -5,23 +5,26 @@ using UnityEngine;
 [System.Serializable]
 public class StoreData
 {
-    public int Money { get; private set; }
+    public float Money { get; private set; }
     public int Reputation { get; private set; }
 
-    public StoreData(int startingMoney, int startingReputation)
+    public StoreData(float startingMoney, int startingReputation)
     {
         Money = startingMoney;
         Reputation = startingReputation;
     }
 
-    public void AddMoney(int amount)
+    public void AddMoney(float amount)
     {
         Money += amount;
     }
 
-    public void SpendMoney(int amount)
+    public void SpendMoney(float amount)
     {
-        Money = Mathf.Max(0, Money - amount); // Prevent negative money
+        if (Money > amount)
+        {
+            Money = Mathf.Max(0, Money - amount);
+        }
     }
 
     public void IncreaseReputation(int amount)
@@ -36,7 +39,7 @@ public class StoreData
 
     public void ResetData()
     {
-        Money = 0;
+        Money = 0.0f;
         Reputation = 0;
     }
 }

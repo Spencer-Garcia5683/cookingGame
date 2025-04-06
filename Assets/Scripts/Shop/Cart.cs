@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class Cart : MonoBehaviour
 {
+    private ShopManager shop;
     public TextMeshProUGUI numItemsTXT;
     public TextMeshProUGUI totalPriceTXT;
     private int numItems;
-    private float finalPrice;
+    public float finalPrice;
+
 
     void Update()
     {

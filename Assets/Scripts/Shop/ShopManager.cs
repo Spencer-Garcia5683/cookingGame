@@ -6,15 +6,12 @@ public class ShopManager : MonoBehaviour
 {
     public Cart cart;
     public GameObject shopUI;
-    public GameObject checkOutUI;
     public TextMeshProUGUI TotalTXT;
 
     public List<ShopItem> shopItems;
 
     private int itemCount = 0;
     private float total = 0;
-    public float tax = 0;
-
 
     void Start()
     {
@@ -40,6 +37,7 @@ public class ShopManager : MonoBehaviour
     void Update()
     {
         cart.UpdateCart(itemCount);
+        cart.UpdatePrice(total);
     }
 
     public void IncreaseQuantity(ShopItem item)
@@ -48,6 +46,7 @@ public class ShopManager : MonoBehaviour
         {
             item.quantity++;
             itemCount++;
+            total += item.price;
         }
         else
         {
@@ -61,6 +60,7 @@ public class ShopManager : MonoBehaviour
         {
             item.quantity--;
             itemCount--;
+            total -= item.price;
         }
         else
         {
@@ -77,45 +77,10 @@ public class ShopManager : MonoBehaviour
             Debug.LogWarning("Shop UI not set!");
     }
 
-    public void OpenCheckOut()
+    public void Reset()
     {
-        shopUI.SetActive(false);
-        checkOutUI.SetActive(true);
-        SetupCheckout();
+        itemCount = 0;
+        total = 0;
     }
 
-    public void Back()
-    {
-        checkOutUI.SetActive(false);
-        shopUI.SetActive(true);
-    }
-
-    private void SetupCheckout()
-    {
-
-    }
-
-    private float GetTotal()
-    {
-        float total = 0f;
-
-        foreach (ShopItem item in shopItems)
-        {
-            if (item.quantity > 0)
-            {
-                total += item.price * item.quantity;
-            }
-            else
-            {
-                item.priceTXT.text = "";
-                item.quantityTXT.text = "";
-                item.nameTXT.text = "";
-                item.itemImageUI = null;
-            }
-        }
-
-        return total;
-    }
-
-    
 }
