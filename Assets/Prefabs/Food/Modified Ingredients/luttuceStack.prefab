@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8217449803525986429}
   m_Layer: 0
   m_Name: Sliced Lettuce (3)
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 17349209574952964}
   m_Layer: 0
   m_Name: Sliced Lettuce (1)
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 3888573819394803909}
   m_Layer: 0
   m_Name: Sliced Lettuce (2)
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,9 +313,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4973943100701412484}
+  - component: {fileID: 2103709096076941625}
   m_Layer: 0
   m_Name: luttuceStack
-  m_TagString: Untagged
+  m_TagString: lettuceStack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339,6 +340,25 @@ Transform:
   - {fileID: 450332415487002817}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2103709096076941625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575001180492985650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c8b94d0b2a69a488f36f7ce6b586c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MAX: 4
+  ingredients:
+  - {fileID: 6935831967760033842}
+  - {fileID: 60849138705630902}
+  - {fileID: 477531717435558520}
+  - {fileID: 43530693694572116}
+  positions: []
 --- !u!1 &5860067878771198387
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +454,7 @@ GameObject:
   - component: {fileID: 7795033231854650339}
   m_Layer: 0
   m_Name: Sliced Lettuce
-  m_TagString: Untagged
+  m_TagString: lettuceSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

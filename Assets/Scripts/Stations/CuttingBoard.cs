@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class CuttingBoard : MonoBehaviour, IInteractable
 {
@@ -23,7 +24,16 @@ public class CuttingBoard : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
+        if(!chopping)
+        {
+            StopCoroutine(chopFood());
+        }
+    }
 
+    public void removeItem()
+    {
+        Destroy(currentItem);
+        currentItem = null;
     }
 
     public bool checkItem()
@@ -35,8 +45,66 @@ public class CuttingBoard : MonoBehaviour, IInteractable
     }
 
 
-    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item)
+    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice, bool isPlate)
     {
+        /*
+        if (isStack)
+        {
+            
+            if (item != null && (currentItem != null && currentItem.GetComponent<ingredientStack>() != null))
+            {
+                return null;
+            }
+            else if (item != null && (currentItem != null && currentItem.GetComponent<FoodObject>() != null))
+            {
+                return null;
+                if (currentItem.GetComponent<ingredientStack>().ingredients[3] == null)
+                {
+                    GameObject temp = currentItem;
+                    currentItem = item;
+                    currentItem.GetComponent<ingredientStack>().placeOnStack(temp);
+                    return null;
+                }
+                else
+                    return null;
+            }
+            if (item != null && currentItem == null)
+            {
+                currentItem = item;
+                currentItem.transform.parent = spawnLocation;
+                currentItem.transform.localPosition = Vector3.zero;
+                player.GetComponent<playerInteraction>().removeHeldItem();
+                return null;
+            }
+
+        }
+        if (isSlice)
+        {
+            return null;
+            if (item != null && (currentItem != null && currentItem.GetComponent<ingredientStack>() != null))
+            {
+                return null;
+                if (currentItem.GetComponent<ingredientStack>().ingredients[3] == null)
+                {
+                    currentItem.GetComponent<ingredientStack>().placeOnStack(item);
+                }
+                return null;
+            }
+            else if (item != null && (currentItem != null && currentItem.GetComponent<FoodObject>() != null))
+            {
+                
+                    return null;
+            }
+            if (item != null && currentItem == null)
+            {
+                currentItem = item;
+                currentItem.transform.parent = spawnLocation;
+                currentItem.transform.localPosition = Vector3.zero;
+                player.GetComponent<playerInteraction>().removeHeldItem();
+                return null;
+            }
+        }
+        */
         if (item != null && currentItem == null)
         {
             currentItem = item;
@@ -65,11 +133,26 @@ public class CuttingBoard : MonoBehaviour, IInteractable
 
     public void setChopping(bool choice)
     {
+        if (currentItem == null)
+            return;
+        if(currentItem.tag == "lettuceStack" || currentItem.tag == "tomatoStack" || currentItem.tag == "cheeseStack")
+        {
+            chopping = false;
+            return;
+        }    
         startChopping = choice;
-        if(startChopping)
+        if (startChopping)
             StartCoroutine(chopFood());
         else
-            StopCoroutine(chopFood());
+        {
+            StopAllCoroutines();
+            chopping = false;
+        }
+    }
+
+    public GameObject getItem()
+    {
+        return currentItem;
     }
 
     IEnumerator chopFood()

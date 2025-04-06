@@ -17,6 +17,16 @@ TagManager:
   - lettuce
   - tomato
   - cheese
+  - lettuceStack
+  - cheeseStack
+  - tomatoStack
+  - lettuceSlice
+  - cheeseSlice
+  - tomatoSlice
+  - plate
+  - cookedPatty
+  - topBun
+  - bottomBun
   layers:
   - Default
   - TransparentFX

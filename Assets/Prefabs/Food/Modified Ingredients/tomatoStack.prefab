@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3598873592096560749}
   m_Layer: 0
   m_Name: SlicedTomato
-  m_TagString: Untagged
+  m_TagString: tomatoSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,9 +138,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3678914763010798159}
+  - component: {fileID: 7161812710453657043}
   m_Layer: 0
   m_Name: tomatoStack
-  m_TagString: Untagged
+  m_TagString: tomatoStack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +165,25 @@ Transform:
   - {fileID: 5894872906478699946}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7161812710453657043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939646139399404675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c8b94d0b2a69a488f36f7ce6b586c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MAX: 4
+  ingredients:
+  - {fileID: 1530522808578119586}
+  - {fileID: 5226825322833581680}
+  - {fileID: 5550542692740845211}
+  - {fileID: 6402591380489974809}
+  positions: []
 --- !u!1 &5226825322833581680
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +196,7 @@ GameObject:
   - component: {fileID: 9169224131252128197}
   m_Layer: 0
   m_Name: SlicedTomato (1)
-  m_TagString: Untagged
+  m_TagString: tomatoSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,7 +242,7 @@ GameObject:
   - component: {fileID: 486855259435384722}
   m_Layer: 0
   m_Name: SlicedTomato (2)
-  m_TagString: Untagged
+  m_TagString: tomatoSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +371,7 @@ GameObject:
   - component: {fileID: 2197079452596159029}
   m_Layer: 0
   m_Name: SlicedTomato (3)
-  m_TagString: Untagged
+  m_TagString: tomatoSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

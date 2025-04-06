@@ -1315,7 +1315,8 @@ GameObject:
   - component: {fileID: 501773578974409761}
   - component: {fileID: 2628887262281907656}
   - component: {fileID: 7915889546171257148}
-  m_Layer: 0
+  - component: {fileID: 8415775584087410623}
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -1342,6 +1343,8 @@ Transform:
   - {fileID: 8483399840539027669}
   - {fileID: 4765508174688460811}
   - {fileID: 2533842149516449573}
+  - {fileID: 6432484884514723936}
+  - {fileID: 2681437436988288826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &2791063295027700613
@@ -1424,6 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 2a02df6d7c2f9fc41b5b356bf402af8e, type: 3}
   m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1482,11 +1486,64 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4007b2d8-5a13-4bcf-a8d8-39a793913115
     m_ActionName: player/holdRotate[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8415775584087410623}
+        m_TargetAssemblyTypeName: playerInteraction, Assembly-CSharp
+        m_MethodName: pickupItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 864f8f61-4411-4a2f-a17d-a23400a26ac4
+    m_ActionName: player/pickup[/Keyboard/e,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8415775584087410623}
+        m_TargetAssemblyTypeName: playerInteraction, Assembly-CSharp
+        m_MethodName: interactWithStation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 45eb4eb9-41e3-4295-ab7d-700228201b62
+    m_ActionName: player/interact[/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: New control scheme
+  m_DefaultControlScheme: controller
   m_DefaultActionMap: player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8415775584087410623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390281926749001618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25336de83dd17745b0e2cec78f87b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHeldItem: {fileID: 0}
+  currentSelectedStation: {fileID: 0}
+  heldItemPos: {fileID: 6731162778476708999}
+  interactPos: {fileID: 7407714284458383110}
+  interactRadius: 0.33
+  ignore:
+    serializedVersion: 2
+    m_Bits: 64
+  holdThreshold: 0.2
 --- !u!1 &5422171159088434326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,6 +2177,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5830850142466248730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6731162778476708999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6432484884514723936}
+  m_Layer: 0
+  m_Name: heldItemSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6432484884514723936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731162778476708999}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.1105876, z: 1.008647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 436472396938535636}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6855304735918070985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2524,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 999978614790038016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7407714284458383110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2681437436988288826}
+  m_Layer: 0
+  m_Name: interactPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2681437436988288826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407714284458383110}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.85458755, z: 0.8116474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 436472396938535636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7441423926000083671
 GameObject:
