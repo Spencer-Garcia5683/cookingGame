@@ -6,7 +6,6 @@ public class ShopManager : MonoBehaviour
 {
     public Cart cart;
     public GameObject shopUI;
-    public TextMeshProUGUI TotalTXT;
 
     public List<ShopItem> shopItems;
 
@@ -28,10 +27,6 @@ public class ShopManager : MonoBehaviour
         ShopItem item6 = shopItems[5];
         ShopItem item7 = shopItems[6];
         ShopItem item8 = shopItems[7];
-
-
-        if (TotalTXT == null) TotalTXT = GetComponent<TextMeshProUGUI>();
-
     }
 
     void Update()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Computer : MonoBehaviour//, IInteractable
+public class Computer : MonoBehaviour, IInteractable
 {
     public GameObject shopUI;
     public ShopManager shopManager;
