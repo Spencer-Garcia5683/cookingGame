@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7221961193067166161
+--- !u!1 &7709829847787543741
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2242248552147173225}
-  - component: {fileID: 3857988303132198339}
-  - component: {fileID: 111406921699118807}
-  - component: {fileID: 9149634815208714664}
+  - component: {fileID: 8499813462377864156}
+  - component: {fileID: 9111937646695649540}
+  - component: {fileID: 7555992947457647153}
+  - component: {fileID: 4099192532858872394}
+  - component: {fileID: 7500307260250228462}
   m_Layer: 0
-  m_Name: crate_tomatoes
-  m_TagString: Untagged
+  m_Name: stove
+  m_TagString: stove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2242248552147173225
+--- !u!4 &8499813462377864156
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221961193067166161}
+  m_GameObject: {fileID: 7709829847787543741}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.598, y: 0.10624777, z: -9.754}
+  m_LocalPosition: {x: 8.26, y: -0.0037527084, z: -9.815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3857988303132198339
+--- !u!33 &9111937646695649540
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221961193067166161}
-  m_Mesh: {fileID: 3740409364956900546, guid: 57ff9bacdbfa04e4abaea2f24e56a5c0, type: 3}
---- !u!23 &111406921699118807
+  m_GameObject: {fileID: 7709829847787543741}
+  m_Mesh: {fileID: 5385832465780562169, guid: 20fdd4cdfedcc52418cf1126d10dd62f, type: 3}
+--- !u!23 &7555992947457647153
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221961193067166161}
+  m_GameObject: {fileID: 7709829847787543741}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1724080987372072942, guid: 57ff9bacdbfa04e4abaea2f24e56a5c0, type: 3}
+  - {fileID: -1724080987372072942, guid: 20fdd4cdfedcc52418cf1126d10dd62f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,18 +85,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9149634815208714664
+--- !u!114 &4099192532858872394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221961193067166161}
+  m_GameObject: {fileID: 7709829847787543741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ed4e81ae7b95744a386d94c1811b4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 989e97afd705a8344af6a5efde5f3eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 7053924847523100013, guid: 893d9286c8245524abf9e65bb2b56718, type: 3}
-  availableFoods:
-  - {fileID: 11400000, guid: b4ee4d1e0dc78ad4fb1909d07a29f213, type: 2}
+  MAXFOOD: 4
+  cookedPattyPrefab: {fileID: 7053924847523100013, guid: f437f1e065b22a8468f408c883668a21, type: 3}
+  stoveTops: []
+  spawnPositions:
+  - {x: 0.5, y: 1.2, z: 0.5}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  selectedIndex: 0
+  topIndex: -1
+  cookTime: 5
+--- !u!65 &7500307260250228462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709829847787543741}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1.2000003, z: 1.89}
+  m_Center: {x: 0, y: 0.6000002, z: 0.11392766}

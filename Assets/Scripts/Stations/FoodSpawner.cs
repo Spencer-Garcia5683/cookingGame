@@ -40,7 +40,7 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         topIndex++;
     }
 
-    public void Interact()
+    public void Interact(GameObject player)
     {
 
     }

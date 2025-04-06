@@ -20,7 +20,7 @@ public class Computer : MonoBehaviour//, IInteractable
        
     }
 
-    public void Interact()
+    public void Interact(GameObject player)
     {
         shopUI.SetActive(true);
     }
