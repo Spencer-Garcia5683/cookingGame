@@ -8,11 +8,9 @@ public class Computer : MonoBehaviour, IInteractable
     public ShopManager shopManager;
     void Start()
     {
-        shopManager = GetComponent<ShopManager>();
-
         if (shopManager == null)
         {
-            Debug.Log("No Shop Manager Active");
+            shopManager = GetComponent<ShopManager>();
         }
 
         shopUI = GetComponent<GameObject>();
@@ -22,7 +20,10 @@ public class Computer : MonoBehaviour, IInteractable
 
     public void Interact(GameObject player)
     {
-        shopUI.SetActive(true);
+        if (shopUI != null)
+        {
+            shopUI.SetActive(true);
+        }
     }
 
     public GameObject pickupItem(GameObject player, bool tempBool, GameObject item, bool isStack, bool isSlice, bool isPlate)
