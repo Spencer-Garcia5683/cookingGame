@@ -1,26 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+
+public enum DayOfTheWeek { Monday, Tuesday, Wednesday, Thursday, Friday };
+
 public class StoreManager : MonoBehaviour
 {
     public StoreData store;
+    private int dayCounter;
+    private int hourCounter = 8;
+    private int minuteCounter = 0;
 
     void Start()
     {
-        store = new StoreData(100, 50); 
+        store = new StoreData(100, 50);
         Debug.Log("Money: " + store.Money + ", Reputation: " + store.Reputation);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.JoystickButton4))
-        {
-            store.AddMoney(100);
-        }
-        if (Input.GetKeyUp(KeyCode.P))
-        {
-            store.IncreaseReputation(10);
-        }
+        
     }
 
 
@@ -35,5 +35,6 @@ public class StoreManager : MonoBehaviour
         store.SpendMoney(refundValue);
         store.DecreaseReputation(1);
     }
+
 }
 
