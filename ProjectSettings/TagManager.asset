@@ -17,6 +17,9 @@ TagManager:
   - lettuce
   - tomato
   - cheese
+  - lettuceStack
+  - cheeseStack
+  - tomatoStack
   layers:
   - Default
   - TransparentFX

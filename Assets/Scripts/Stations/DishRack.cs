@@ -81,7 +81,7 @@ public class DishRack : MonoBehaviour, IInteractable
     }
 
 
-    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item)
+    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice)
     {
         if (item != null)
         {

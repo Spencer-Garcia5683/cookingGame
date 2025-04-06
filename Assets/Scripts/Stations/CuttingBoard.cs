@@ -23,7 +23,10 @@ public class CuttingBoard : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-
+        if(!chopping)
+        {
+            StopCoroutine(chopFood());
+        }
     }
 
     public bool checkItem()
@@ -35,8 +38,64 @@ public class CuttingBoard : MonoBehaviour, IInteractable
     }
 
 
-    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item)
+    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice)
     {
+        if (isStack)
+        {
+            if(item != null && (currentItem != null && currentItem.GetComponent<ingredientStack>() != null))
+            {
+                return null;
+            }
+            else if (item != null && (currentItem != null && currentItem.GetComponent<FoodObject>() != null))
+            {
+                if (currentItem.GetComponent<ingredientStack>().ingredients[3] == null)
+                {
+                    GameObject temp = currentItem;
+                    currentItem = item;
+                    currentItem.GetComponent<ingredientStack>().placeOnStack(temp);
+                    return null;
+                }
+                else
+                    return null;
+            }
+            if (item != null && currentItem == null)
+            {
+                currentItem = item;
+                currentItem.transform.parent = spawnLocation;
+                currentItem.transform.localPosition = Vector3.zero;
+                player.GetComponent<playerInteraction>().removeHeldItem();
+                return null;
+            }
+
+        }
+        if (isSlice)
+        {
+            if (item != null && (currentItem != null && currentItem.GetComponent<ingredientStack>() != null))
+            {
+                return null;
+            }
+            else if (item != null && (currentItem != null && currentItem.GetComponent<FoodObject>() != null))
+            {
+                if (currentItem.GetComponent<ingredientStack>().ingredients[3] == null)
+                {
+                    GameObject temp = currentItem;
+                    currentItem = item;
+                    currentItem.GetComponent<ingredientStack>().placeOnStack(temp);
+                    return null;
+                }
+                else
+                    return null;
+            }
+            if (item != null && currentItem == null)
+            {
+                currentItem = item;
+                currentItem.transform.parent = spawnLocation;
+                currentItem.transform.localPosition = Vector3.zero;
+                player.GetComponent<playerInteraction>().removeHeldItem();
+                return null;
+            }
+        }
+
         if (item != null && currentItem == null)
         {
             currentItem = item;
@@ -66,10 +125,18 @@ public class CuttingBoard : MonoBehaviour, IInteractable
     public void setChopping(bool choice)
     {
         startChopping = choice;
-        if(startChopping)
+        if (startChopping)
             StartCoroutine(chopFood());
         else
-            StopCoroutine(chopFood());
+        {
+            StopAllCoroutines();
+            chopping = false;
+        }
+    }
+
+    public GameObject getItem()
+    {
+        return currentItem;
     }
 
     IEnumerator chopFood()

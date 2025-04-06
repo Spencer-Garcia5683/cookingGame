@@ -30,7 +30,7 @@ public class Counter : MonoBehaviour, IInteractable
     }
 
 
-    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item)
+    public GameObject pickupItem(GameObject player, bool hasFood, GameObject item, bool isStack, bool isSlice)
     {
         if (item != null && currentItem == null)
         {
@@ -58,6 +58,9 @@ public class Counter : MonoBehaviour, IInteractable
 
     }
 
-
+    public GameObject getItem()
+    {
+        return currentItem;
+    }
 
 }

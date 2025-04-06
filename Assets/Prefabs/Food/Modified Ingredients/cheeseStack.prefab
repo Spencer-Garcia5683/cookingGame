@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2385323805655853927}
   m_Layer: 0
   m_Name: cheeseStack
-  m_TagString: Untagged
+  m_TagString: cheeseStack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 8744220317293787131}
   m_Layer: 0
   m_Name: Sliced Cheese (3)
-  m_TagString: Untagged
+  m_TagString: cheeseSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 5037112890356922454}
   m_Layer: 0
   m_Name: Sliced Cheese (1)
-  m_TagString: Untagged
+  m_TagString: cheeseSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 7732139440005539970}
   m_Layer: 0
   m_Name: Sliced Cheese (2)
-  m_TagString: Untagged
+  m_TagString: cheeseSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 158344408334000086}
   m_Layer: 0
   m_Name: Sliced Cheese
-  m_TagString: Untagged
+  m_TagString: cheeseSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

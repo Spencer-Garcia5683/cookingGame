@@ -2495,6 +2495,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 864f8f61-4411-4a2f-a17d-a23400a26ac4
     m_ActionName: player/Interact[/Keyboard/e,/XInputControllerWindows/buttonSouth,/XInputControllerWindows2/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 45eb4eb9-41e3-4295-ab7d-700228201b62
+    m_ActionName: player/interact[/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: controller
   m_DefaultActionMap: player
