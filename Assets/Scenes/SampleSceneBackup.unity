@@ -3282,6 +3282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 7473861096508888321, guid: 64dec1d8e94406442bc1639939979ea2, type: 3}
+      propertyPath: camerashake
+      value: 
+      objectReference: {fileID: 7251873224120934040, guid: 37cdb159dfd60274fafaa7ba3ad7cd4f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
