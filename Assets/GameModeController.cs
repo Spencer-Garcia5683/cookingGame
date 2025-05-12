@@ -66,13 +66,28 @@ public class GameModeController : MonoBehaviour
             Debug.LogWarning("No available tables.");
         }
 
-        // Move rest of queue forward
+        // Move the rest of the queue forward
         for (int i = 0; i < customerQueue.Count; i++)
         {
             customerQueue[i].AdvanceInLine(lineSpots[i], i);
         }
 
         currentCustomers--; // Optional depending on how you define "current"
+    }
+
+    // New method to remove a customer from the line
+    public void RemoveCustomerFromLine(customer customerToRemove)
+    {
+        // Remove the customer from the queue
+        customerQueue.Remove(customerToRemove);
+
+        // Shift the remaining customers forward
+        for (int i = 0; i < customerQueue.Count; i++)
+        {
+            customerQueue[i].AdvanceInLine(lineSpots[i], i); // Update their line position
+        }
+
+        currentCustomers--; // Decrease the current customer count
     }
 
     Transform FindAvailableTable()

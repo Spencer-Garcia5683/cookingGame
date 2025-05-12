@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using static System.Diagnostics.Debug;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -80,7 +80,7 @@ public class StoreManager : MonoBehaviour
                 hourCounter++;
 
                 // You can also add logic to reset hours if needed (e.g., 24hr cycle)
-                if (hourCounter >= 20)
+                if (hourCounter >= 12)
                 {
                     hourCounter = 0;
                     dayCounter++;
@@ -90,7 +90,7 @@ public class StoreManager : MonoBehaviour
                 }
             }
 
-            Debug.Log($"Time: {hourCounter:D2}:{minuteCounter:D2}");
+            //Debug.Log($"Time: {hourCounter:D2}:{minuteCounter:D2}");
         }
     }
 

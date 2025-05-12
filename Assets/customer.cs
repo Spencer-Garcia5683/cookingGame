@@ -1,14 +1,23 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum FoodType
+{
+    Burger,
+    IceCream
+}
+
 public class customer : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform targetSpot;
     private GameModeController controller;
     private int lineIndex;
+    public FoodType desiredFood;
 
     public CustomerState state;
+
+    public float checkRadius = 1f;
 
     public void Initialize(Transform destination, GameModeController gameController, int linePos)
     {
@@ -22,6 +31,26 @@ public class customer : MonoBehaviour
 
     private void Update()
     {
+        Collider[] windows = Physics.OverlapSphere(transform.position + Vector3.up, checkRadius);
+        foreach (Collider window in windows)
+        {
+            if (window.tag == "serve")
+            {
+                if (CheckPlateInWindow(window.gameObject.GetComponent<servingWindow>()))
+                {
+                    GameObject temp = GameObject.FindGameObjectWithTag("storeManager");
+                    temp.GetComponent<StoreManager>().MakeSale(25);
+
+                    window.GetComponent<servingWindow>().removeItem();
+
+                    // After serving, remove the customer from the line
+                    controller.RemoveCustomerFromLine(this);
+
+                    Destroy(gameObject);
+                }
+            }
+        }
+
         switch (state)
         {
             case CustomerState.WalkingToLine:
@@ -30,11 +59,11 @@ public class customer : MonoBehaviour
                 break;
 
             case CustomerState.Ordering:
-                // tell GameMode or Player script they’re ordering
+                // Handle ordering state here
                 break;
 
             case CustomerState.WaitingForFood:
-                // Wait here
+                // Handle waiting for food
                 break;
 
             case CustomerState.WalkingToTable:
@@ -43,9 +72,26 @@ public class customer : MonoBehaviour
                 break;
 
             case CustomerState.Eating:
-                // Timer or animation here, then leave
+                // Handle eating state here
                 break;
         }
+    }
+
+    public void SetOrder(FoodType order)
+    {
+        desiredFood = order;
+        Debug.Log($"Customer {name} wants {order}");
+    }
+
+    public bool CheckPlateInWindow(servingWindow window)
+    {
+        if (window.burgSlot != null)
+            return true;
+
+        if (desiredFood == FoodType.IceCream && window.iceCreamSlot.transform.childCount > 0)
+            return true;
+
+        return false;
     }
 
     public void MoveTo(Transform newTarget)
@@ -56,6 +102,7 @@ public class customer : MonoBehaviour
 
     public bool HasReachedDestination()
     {
+        if(agent == null) return false;
         return !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance;
     }
 
@@ -66,7 +113,10 @@ public class customer : MonoBehaviour
         state = CustomerState.WalkingToLine;
     }
 
-    public int GetLineIndex() => lineIndex;
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(gameObject.transform.position + Vector3.up, checkRadius);
+    }
 }
 
 public enum CustomerState
@@ -78,4 +128,3 @@ public enum CustomerState
     WalkingToTable,
     Eating
 }
-

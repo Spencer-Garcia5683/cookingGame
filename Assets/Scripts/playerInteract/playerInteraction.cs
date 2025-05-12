@@ -33,7 +33,7 @@ public class playerInteraction : MonoBehaviour
 
         foreach(Collider c in objs)
         {
-            if((c.tag == "foodCrate" || c.tag == "counter" || c.tag == "dishRack" || c.tag == "stove" || c.tag == "cuttingBoard" || c.tag == "computer") && (currentSelectedStation == null || currentSelectedStation != c.gameObject))
+            if((c.tag == "foodCrate" || c.tag == "counter" || c.tag == "dishRack" || c.tag == "stove" || c.tag == "cuttingBoard" || c.tag == "computer" || c.tag == "serve" || c.tag == "trash") && (currentSelectedStation == null || currentSelectedStation != c.gameObject))
             {
                 currentSelectedStation = c.gameObject;
             }
@@ -144,6 +144,14 @@ public class playerInteraction : MonoBehaviour
         if (currentSelectedStation.tag == "dishRack")
             if (currentHeldItem != null && currentSelectedStation != null && currentSelectedStation.GetComponent<DishRack>().checkMax())
                 return;
+        
+
+        if(currentSelectedStation.tag == "trash")
+        {
+            var station = currentSelectedStation.GetComponent<trash>();
+            if (currentHeldItem != null)
+                station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
+        }
 
         if (currentSelectedStation.tag == "foodCrate")
         {
@@ -277,9 +285,40 @@ public class playerInteraction : MonoBehaviour
                 }
             }
         }
-            
+        else if (currentSelectedStation.tag == "serve")
+        {
+            var station = currentSelectedStation.GetComponent<servingWindow>();
+            if (currentHeldItem != null)
+            {
+                GameObject leftover;
+                //if(currentHeldItem.tag == "plate")
+                //if (currentSelectedStation.GetComponent<Counter>().currentItem != null)
+                //if (currentSelectedStation.GetComponent<Counter>().currentItem.tag == "plate")
+                //{
+                //leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, );
+                //return;
+                //}
 
-        
+                leftover = station.pickupItem(gameObject, true, currentHeldItem, false, false, false);
+                if (leftover == null)
+                {
+                    currentHeldItem = null;
+                }
+            }
+            else
+            {
+                GameObject pickedUp = station.pickupItem(gameObject, false, null, false, false, false);
+                if (pickedUp != null)
+                {
+                    currentHeldItem = pickedUp;
+                    currentHeldItem.transform.position = heldItemPos.transform.position;
+                    currentHeldItem.transform.parent = gameObject.transform;
+                }
+            }
+        }
+
+
+
     }
 
 
@@ -292,6 +331,12 @@ public class playerInteraction : MonoBehaviour
     public GameObject removeHeldItem()
     {
         return currentHeldItem;
+    }
+
+    public void DestroyItem()
+    {
+        Destroy(currentHeldItem);
+        currentHeldItem = null;
     }
 
     private void OnDrawGizmos()

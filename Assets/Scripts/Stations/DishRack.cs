@@ -77,7 +77,21 @@ public class DishRack : MonoBehaviour, IInteractable
         GameObject temp = allPlates[topIndex];
         allPlates[topIndex] = null;
         topIndex--;
+        StartCoroutine(replacePlate());
         return temp;
+    }
+
+    IEnumerator replacePlate()
+    {
+        yield return new WaitForSeconds(3);
+
+        if (topIndex + 1 > MAXPLATES - 1)
+            yield break;
+
+        topIndex++;
+        allPlates[topIndex] = Instantiate(platePrefab);
+        allPlates[topIndex].transform.parent = gameObject.transform;
+        allPlates[topIndex].transform.localPosition = spawnPositions[topIndex];
     }
 
 
